@@ -1,6 +1,6 @@
 function [r_ge]=Perifocal_to_Geocentric(Omega,w,i,r_pf)
-R = [cos(Omega)*cos(w)-sin(Omega)*sin(w)*cos(i), -cos(Omega)*sin(w)-sin(Omega)*cos(w)*cos(i), sin(Omega)*sin(i);
-     sin(Omega)*cos(w)+cos(Omega)*sin(w)*cos(i), -sin(Omega)*sin(w)+cos(Omega)*cos(w)*cos(i), -cos(Omega)*sin(i);
-     sin(w)*sin(i), cos(w)*sin(i), cos(i)]
+R = [cosd(Omega)*cosd(w)-sind(Omega)*sind(w)*cosd(i),-cosd(Omega)*sind(w)-sind(Omega)*cosd(w)*cosd(i),sind(Omega)*sind(i);
+     sind(Omega)*cosd(w)+cosd(Omega)*sind(w)*cosd(i),-sind(Omega)*sind(w)+cosd(Omega)*cosd(w)*cosd(i),-cosd(Omega)*sind(i);
+     sind(w)*sind(i),cosd(w)*sind(i),cosd(i)]
  r_ge = R*r_pf
  
